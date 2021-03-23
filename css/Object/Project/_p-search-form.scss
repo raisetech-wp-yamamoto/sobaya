@@ -1,0 +1,51 @@
+.p-search-form {
+	display: flex;
+	justify-content: center;
+
+	
+	&__keyword {
+		font-family: $font-jp;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		padding-left: 1em;
+		width: 100%;
+		height: auto;
+		@include fz_vw(21);
+		line-height: 1;
+		border: none;
+		background: $color-white2;
+		@include mq(sm) {
+			font-size: 1.2rem;
+			padding: 0 1em;
+			line-height: 23px;
+		}
+	}
+
+	&__submit {
+		font-family: $font-jp;
+		padding: 0.5em 1em;
+		width: auto;
+		@include fz_vw(21);
+		line-height: 1;
+		color: $color-txt;
+		background: $color-white2;
+		border: none;
+		transition-property: color background-color;
+        transition-timing-function: $transition-timing-function;
+        transition-duration: $transition-duration;
+
+		@include mq(sm) {
+			font-size: 1.2rem;
+			padding: 0 1em;
+			line-height: 23px;
+		}
+
+		&:hover,
+		&:active {
+			cursor: pointer;
+			transition: all 0.3s;
+			background: $color-gray1;
+			color: $color-white2;
+		}
+	}
+}

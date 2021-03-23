@@ -1,0 +1,19 @@
+.pagenavi-btn{
+    font-family: inherit;
+    border: none;
+    width: 459px;
+    padding: 5% 0;
+    background-color: #C1904F;
+    color: white;
+    @include fz_vw(34);
+    position: relative;
+    @include mq(md){
+        padding: 4% 0;
+        @include fz_vw(32, 960);
+    }
+    &::after{
+        content: ">";
+        position: absolute;
+        right:5.7%;
+    }
+}

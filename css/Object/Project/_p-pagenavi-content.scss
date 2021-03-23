@@ -1,0 +1,39 @@
+.pagenavi-content{
+    width:23.9%;
+    color: #393939;
+    max-width: 459px;
+    @include mq(md){
+        max-width: 484px;
+    }
+    @include mq(sm){
+        max-width: 207px;
+    }
+    >h3{
+        @include fz_vw(34);
+        width: 100%;
+        @include mq(md){
+            @include fz_vw(32, 960);
+        }
+    }
+    >img{
+        margin-top: 11px;
+        width: 100%;
+    }
+    >p{
+        @include fz_vw(20);
+        margin-top: 13px;
+        line-height: 27px;
+        width: 100%;
+        @include mq(md){
+            @include fz_vw(18, 960);
+            line-height: 23px;
+        }
+        @include mq(sm){
+            line-height: 20px;
+        }
+    }
+    .pagenavi-btn{
+        margin-top: 10%;
+        width: 100%;
+    }
+}

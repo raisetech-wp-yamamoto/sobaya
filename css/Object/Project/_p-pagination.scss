@@ -1,0 +1,97 @@
+.p-pagination {
+  margin-top: 90px;
+
+  .pagination {
+    margin-top: -12px;
+
+    .screen-reader-text {
+      position: absolute;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: -12px;
+      text-align: center;
+
+
+      .current {
+        margin: 0;
+        margin-left: 12px;
+        margin-top: 12px;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: $color-gray1;
+        color: $color-white2;
+        font-size: 1.6rem;
+        line-height: 40px;
+      }
+
+      .dots {
+        margin: 0;
+        margin-left: 12px;
+        margin-top: 12px;
+        display: inline-block;
+        height: 40px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 40px;
+      }
+
+
+      a.page-numbers {
+        margin: 0;
+        margin-left: 12px;
+        margin-top: 12px;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: none;
+        font-size: 1.6rem;
+        text-decoration: none;
+        line-height: 40px;
+        color: $color-pagenation-txt;
+        background-color: $color-pagenation-bg1;
+        transition-property: color background-color;
+        transition-timing-function: $transition-timing-function;
+        transition-duration: $transition-duration;
+
+        &:hover,
+        &:focus {
+          transition: all 0.3s;
+          color: $color-pagenation-hover-txt;
+          background-color: $color-pagenation-hover-bg;
+        }
+
+
+        &.prev {
+          margin-left: 0;
+        }
+
+        &.prev,
+        &.next {
+          width: 40px;
+          background-color: $color-white1;
+          fill: $color-pagenation-txt;
+          transition-property: fill color background-color;
+          transition-timing-function: $transition-timing-function;
+          transition-duration: $transition-duration;
+
+
+          &:hover,
+          &:hover {
+            background: $color-gray1;
+            fill: $color-white2;
+          }
+        }
+      }
+    }
+  }
+}

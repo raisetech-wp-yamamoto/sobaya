@@ -1,0 +1,12 @@
+.l-main {
+	padding-top: 7%;
+	padding-bottom: 5%;
+
+	@include mq(md) {
+		padding-top: 5%;
+	}
+
+	@include mq(sm) {
+		padding-top: 6%;
+	}
+}

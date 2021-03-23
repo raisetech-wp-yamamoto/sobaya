@@ -1,0 +1,214 @@
+.p-info {
+    width: calc(100vw-17px);
+    background-image: url("../image/bg_info.png");
+    background-size: cover;
+
+    .info__inner {
+        margin: 0 auto;
+        padding: 53px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        @include mq(md) {
+            padding: 37px 0;
+        }
+
+        @include mq(sm) {
+            padding: 20px 5%;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .calendar__inner {
+            margin: 0;
+            margin-right: calc(68 / 1920 * 100%);
+            width: calc(458 / 1920 * 100%);
+            min-width: 400px;
+
+            @include mq(md) {
+                margin-right: calc(14 / 768 * 100%);
+                width: calc(263 / 768 * 100%);
+                max-width: 263px;
+                min-width: 230px;
+            }
+
+            @include mq(sm) {
+                margin-top: 13px;
+                margin-right: 0;
+                // width: calc(337/ 375 * 100%);
+                width: 100%;
+                max-width: 290px;
+                // min-width: 320px;
+            }
+        }
+
+        .info__nav {
+            width: calc(710 / 1920 * 100%);
+            max-width: 710px;
+            height: 508px;
+            background-color: $color-green1;
+            opacity: 0.7;
+            text-align: center;
+
+            @include mq(md) {
+                width: calc(408 / 768 * 100%);
+                min-width: 300px;
+                height: 292px;
+            }
+
+            @include mq(sm) {
+                width: 100%;
+                height: 290px;
+            }
+        }
+
+        .info-title {
+            img {
+                width: calc(412 / 710 * 100%);
+                margin-top: 53px;
+
+                @include mq(md) {
+                    width: calc(237 / 408 * 100%);
+                    margin-top: 22px;
+                }
+
+                @include mq(sm) {
+                    margin-top: 25px;
+                    width: calc(187 / 375 * 100%);
+                }
+            }
+        }
+
+        address {
+            margin: 0 auto;
+            width: 62%;
+            min-width: 300px;
+
+            @include mq(md) {
+                width: 84%;
+            }
+
+            @include mq(sm) {
+                width: 94%;
+            }
+
+            .tel {
+                margin-top: 9px;
+
+                @include mq(md) {
+                    margin-top: 7px;
+                }
+
+                @include mq(sm) {
+                    margin-top: 2px;
+                }
+
+                img {
+                    display: inline-block;
+                    margin-left: -2rem;
+                    width: calc(1.51 * 27 / 720 * 100%);
+
+                    @include mq(md) {
+                        font-size: 2.1rem;
+                    }
+
+                    @include mq(sm) {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                span {
+                    margin-left: 0.5em;
+                    @include fz_vw(34);
+                    font-weight: bold;
+                    font-style: normal;
+                    line-height: 1.18;
+                    color: $color-orange1;
+
+                    @include mq(md) {
+                        font-size: 2.2rem;
+                    }
+
+                    @include mq(sm) {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+
+            dl {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 19px;
+                text-align: left;
+                font-style: normal;
+
+                @include mq(md) {
+                    margin-top: 7px;
+                    min-width: 300px;
+                }
+
+                @include mq(sm) {
+                    margin-top: 9px;
+                    min-width: none;
+                }
+
+                dt {
+                    margin-top: 32px;
+                    width: 26%;
+                    font-size: 1.6rem;
+                    line-height: 1.2;
+
+                    @include mq(md) {
+                        margin-top: 11px;
+                        width: 18%;
+                        font-size: 1.4rem;
+                        line-height: 1.2;
+                    }
+
+                    @include mq(sm) {
+                        margin-top: 13px;
+                        width: 19%;
+                        font-size: 1.3rem;
+                        line-height: 1.2;
+                    }
+                }
+
+                dt:first-of-type {
+                    margin-top: 0;
+                }
+
+                dd {
+                    margin-top: 32px;
+                    width: 74%;
+                    font-size: 1.6rem;
+                    line-height: 1.2;
+
+                    @include mq(md) {
+                        margin-top: 11px;
+                        width: 82%;
+                        font-size: 1.4rem;
+                        line-height: 1.2;
+                    }
+
+                    @include mq(sm) {
+                        margin-top: 13px;
+                        width: 81%;
+                        font-size: 1.3rem;
+                        line-height: 1.2;
+                    }
+                }
+
+                dd:first-of-type {
+                    margin-top: 0;
+                }
+
+                br {
+                    display: block;
+                    content: "";
+                    margin: 7px 0;
+                }
+            }
+        }
+    }
+}

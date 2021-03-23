@@ -1,0 +1,223 @@
+.sec1{
+    background-image: url(../image/bg_discription1.png);
+    background-size: cover;
+    height: 805px;
+    @include mq(md){
+        height: 578px;
+        background-position-x: -400px;
+    }
+    @include mq(sm){
+        height: 255px;
+        background-position-x:-100px;
+    }
+    position: relative;
+    &__contents{
+        width: 100%;
+        height: 100%;
+        color: white;
+        display: flex;
+        position: absolute;
+        top: 0;
+        .sec1__contetns__img{
+            width:38.8%;
+            margin-left: 14.3%;
+            object-fit: contain;
+            object-position: 0 126px;
+            font-family: 'object-fit: contain; object-position: 0 126px;'; /*IE対策*/
+            
+            @include mq(md){
+                margin-left: 8.3%;
+                width: 52.8%;
+                object-position: 0 123px;
+            }
+            @include mq(sm){
+                margin-left: 3vw;
+                width: 50.4%;
+                object-position: 0 58px;
+            }
+        }
+        &__discription{
+            display: flex;
+            flex-direction: column;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            margin-left: 10.8%;
+            height: 100%;
+            @include mq(md){
+                margin-left: 7.6%;
+            }
+            @include mq(sm){
+                margin-left: 3vw;
+            }
+            >p{
+                margin-top: 106px;
+                margin-bottom: 150px;
+                line-height:30px;
+                letter-spacing: 10px;
+                font-size: clamp(14px, get_vw(20, 1920),get_vw(20, 1920));
+                @include mq(md){
+                    @include fz_vw(15, 960);
+                    line-height:23px;
+                    margin-top: 84px;
+                    margin-bottom: 83px;
+                    letter-spacing: 7px;
+                }
+                @include mq(sm){
+                    @include fz_vw(10, 520);
+                    line-height: 4vw;
+                    margin-top: 36px;
+                    margin-bottom: 26px;
+                    letter-spacing: 7px;
+                }
+            }
+            >h2{
+                margin-top: 111px;
+                margin-left:48px;
+                @include fz_vw(127);
+                @include mq(md){
+                    @include fz_vw(68, 960);
+                    margin-top: 97px;
+                    margin-left:4.2%;
+                }
+                @include mq(sm){
+                    @include fz_vw(30, 520);
+                    margin-top: 48px;
+                    margin-left:3.5%;
+                }
+            }
+        }
+
+    }
+}
+
+.sec2{
+    background-image: url(../image/bg_discription2.png);
+    background-size: cover;
+    height: auto;
+    &__contents{
+        width: 100%;
+        height: 100%;
+        color: #393939;
+        display: flex;
+        top: 0;
+        @include mq(md){
+            flex-direction: column-reverse;
+            height: auto;
+        }
+        &__discription{
+            width: 40%;
+            margin-left: 7.6%;
+            @include mq(md){
+                width: auto;
+                margin: 7.1% 15vw;
+                display: block;
+                -webkit-writing-mode: vertical-rl;
+                writing-mode: vertical-rl;
+            }
+            @include mq(sm){
+                margin: 7.1% 3vw;
+                height: 215px;
+            }
+            >h2{
+                margin-top: 159px;
+                @include fz_vw(48);
+                white-space: nowrap;
+                >strong{
+                    @include fz_vw(122);
+                }
+                @include mq(md){
+                    margin-top:0;
+                    font-size: 23px;
+                    @include fz_vw(23, 960);
+                    letter-spacing: 10px;
+                    >strong{
+                        font-size: 75px;
+                        @include fz_vw(75, 960);
+                    }
+                }
+            }
+            >h3{
+                @include fz_vw(43);
+                margin-left: 13vw;
+                white-space: nowrap;
+                @include mq(md){
+                    font-size: 19px;
+                    @include fz_vw(19, 960);
+                    letter-spacing: 10px;
+                    margin-left:10vw;
+                    margin-top: 140px;
+                }
+                @include mq(sm){
+                    margin-left:4vw;
+                    margin-top: 54px;
+                }
+            }
+            >p{
+                -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+                margin: 106px 0 143px 3vw;
+                line-height: 28px;
+                letter-spacing: 10px;
+                @include fz_vw(20);
+                height: 537px;
+                @include mq(md){
+                    margin:0;
+                    height: auto;
+                    letter-spacing: 3px;
+                    @include fz_vw(17, 960);
+                    height: 464px;
+                }
+                @include mq(sm){
+                    line-height:4vw;
+                    height: 215px;
+                }
+            }
+        }
+        .sec2__contetns__img{
+            width: 45.8%;
+            object-fit: contain;
+            font-family: 'object-fit: contain;'; /*IE対策*/
+            object-position: 0 155px;
+            margin-right: 3%;
+            @include mq(md){
+                width: 85.9%;
+                max-width: 720px;
+                object-position: 0;
+                height: auto;
+                display: block;
+                margin: 58px auto 0;
+            }
+            @include mq(sm){
+                width: 80.9%;
+                max-width: 335px;
+                margin: 31px auto 0;
+            }
+        }
+
+    }
+}
+
+.sec3{
+    background-image: url(../image/bg_discription3.png);
+    &__contents{
+        padding: 131px 0 192px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @include mq(md){
+            padding:74.5px 0;
+            display:block;
+            .pagenavi-content{
+                min-width: 62.8%;
+                margin: auto;
+                &:not(:first-of-type){
+                    margin-top: 15%;
+                }
+            }
+        }
+        @include mq(sm){
+            min-width: 55%;
+        }
+        width: 100%;
+    }
+}

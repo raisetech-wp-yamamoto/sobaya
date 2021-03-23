@@ -1,0 +1,26 @@
+.p-map{
+    .resize-maps{
+        position: relative;
+        padding-bottom: 50%; // 縦横比
+        @include mq(sm){
+            padding-bottom: 70%; // 縦横比
+        }
+        height: 0;
+        overflow: hidden;
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+    img{
+        width: 100%;
+        height: 6px;
+        display: block;
+        @include mq(md){
+            height: 3px;
+        }
+    }
+}

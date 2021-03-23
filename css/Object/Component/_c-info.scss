@@ -1,0 +1,67 @@
+.main-info {
+    *{
+        @include fz_vw(19);
+        line-height: 26px;
+        @include mq(md){
+            @include fz_vw(12, 960);
+            line-height: 20px;
+        }
+    }
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    width: 80%;
+    left:5vw;
+    @include mq(md){
+        left:3vw;
+    }
+    @include mq(sm){
+        display: none;
+    }
+    &::before{
+        position: absolute;
+        font-family: FontAwesome;
+        content: "\f041";
+        left:-20px;
+        font-size: 19px;
+        line-height: 26px;
+        @include mq(md){
+            left:-10px;
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}
+
+.access-info{
+    padding-top:3%;
+    padding-bottom:3%;
+    *{
+        @include fz_vw(32);
+        @include mq(md){
+            @include fz_vw(16, 960);
+        }
+    }
+    :not(:nth-last-child(2)):not(:nth-last-child(3)):not(a):not(dt){
+        padding-bottom: 0.9%;
+        border-bottom: 1px dashed $color-txt;
+    }
+    dt{
+        float: left;
+        padding-top: 5%;
+    }
+    dd{
+        padding-left: 10vw;
+        @include mq(md){
+            padding-left: 12vw;
+        }
+        @include mq(sm){
+            padding-left: 20vw;
+        }
+        padding-top: 5%;
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}

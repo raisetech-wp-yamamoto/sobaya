@@ -1,0 +1,15 @@
+.l-contents {
+    max-width: 67%;
+    width: 100%;
+
+    .content-title{
+        display: none;
+    }
+    
+	@include mq(sm) {
+        max-width: none;
+        .content-title{
+            display: block;
+        }
+    }
+}

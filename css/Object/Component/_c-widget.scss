@@ -1,0 +1,52 @@
+.c-widget {
+    margin-top: 29px;
+    padding: 9% 6%;
+    background: $color-gray2 0% 0% no-repeat padding-box;
+    opacity: 0.9;
+
+    &.sp {
+        display: none;
+        padding: 20px 15px;
+    }
+
+    @include mq(md) {
+        margin-top: 12px;
+    }
+
+    &:first-of-type {
+        margin-top: 0;
+
+        @include mq(sm) {
+            display: block;
+            margin-top: 12px;
+        }
+    }
+
+    ul {
+        li {
+            margin-top: 6%;
+            list-style-position: inside;
+
+            a,
+            span {
+                cursor: pointer;
+                @include fz_vw(27);
+                line-height: 1.2;
+                color: $color-txt;
+                text-decoration: none;
+                transition-property: color;
+                transition-timing-function: $transition-timing-function;
+                transition-duration: $transition-duration;
+
+                &:hover {
+                    transition: all 0.3s;
+                    color: $color-hover;
+                }
+
+                &.js-tabActive {
+                    border-bottom: 1px solid #000;
+                }
+            }
+        }
+    }
+}

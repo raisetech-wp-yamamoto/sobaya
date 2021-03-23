@@ -1,0 +1,21 @@
+$breakpoints:(
+    sm: "screen and (max-width: 520px)",
+    ms: "screen and (max-width: 800px)",
+    md: "screen and (max-width: 960px)"
+);
+
+@mixin mq($breakpoint){
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@function get_vw($size, $viewport: 1920) {
+    $rate: 100 / $viewport;
+    @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size: 10, $viewport: 1920) {
+    font-size: $font_size * 1px;
+    font-size: clamp(12px, get_vw($font_size, $viewport),get_vw($font_size, $viewport));
+}

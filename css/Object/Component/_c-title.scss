@@ -1,0 +1,55 @@
+.c-title {
+    &--section {
+        padding-bottom: 1.6%;
+        @include fz_vw(27);
+        line-height: 1.2;
+        font-weight: bold;
+        border-bottom: 2px dashed $color-txt;
+
+        @include mq(md) {
+            padding-bottom: 3%;
+            @include fz_vw(16, 960);
+        }
+    }
+
+    &--post {
+        padding-bottom: 0.9%;
+        @include fz_vw(32);
+        line-height: 1.2;
+        font-weight: bold;
+        border-bottom: 2px dashed $color-txt;
+
+        @include mq(md) {
+            font-size: 1.4rem;
+        }
+
+    }
+
+    &--contents {
+        padding: calc(10.5/1037*100%) 0;
+        @include fz_vw(42);
+        line-height: 1;
+        font-weight: bold;
+        color: #393939;
+        text-shadow: 0px 3px 6px #00000029;
+        border-bottom: 2px solid #393939;
+
+        @include mq(sm) {
+            font-size: 1.2rem;
+        }
+
+        &::first-letter {
+            margin-right: 0.1em;
+            padding: calc(10.5/1037*100%);
+            @include fz_vw(62);
+            line-height: 1;
+            color: #fff;
+            background-color: #393939;
+
+            @include mq(sm) {
+                padding: 3.5px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

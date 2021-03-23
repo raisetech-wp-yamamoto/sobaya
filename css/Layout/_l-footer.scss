@@ -1,0 +1,55 @@
+.footer{
+    *{
+        color: white;
+    }
+    background-image: url(../image/bg_footer-space.png);
+    position: relative;
+    height: 74px;
+    @include mq(md){
+        height: 50px;
+    }
+
+    .footer-menu{
+        width: 34.7%;
+        height: 100%;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mq(md){
+            width: 42.5%;
+        }
+        @include mq(sm){
+            height: auto;
+            padding:12px 0 6px 0;
+            width: 67%;
+        }
+        >li{
+            font-size: 20px;
+            @include mq(md){
+                font-size: 13px;
+            }
+            >a{
+                text-decoration: none;
+            }
+        }
+    }
+    >small{
+        position: absolute;
+        top: 30px;
+        right: 2.7%;
+        font-size: 16px;
+        @include mq(md){
+            transform: scale(0.6); 
+            top: 20px;
+            font-size:13px;
+            right: -30px;
+        }
+        @include mq(sm){
+            position: static;
+            display: block;
+            text-align: center;
+        }
+    }
+}

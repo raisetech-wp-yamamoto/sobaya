@@ -1,0 +1,8 @@
+.l-aside {
+	max-width: 29%;
+	width: 100%;
+
+	@include mq(sm) {
+		display: none;
+	}
+}
