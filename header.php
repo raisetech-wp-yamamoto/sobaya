@@ -26,7 +26,31 @@
                 </div> 
             </div>
             <div class="main__right">
-                <img class="img-main" src="<?php echo get_template_directory_uri(); ?>/image/img_main.png">
+                <img class="img-main" src="<?php echo get_template_directory_uri();
+                        global $template;
+                        $template_dir = basename ( dirname( $template ) );
+                        $template_name = basename($template, '.php');
+                        if(is_front_page()){
+                            echo '/image/img_main.png">'; 
+                        } else if($template_name == 'menus'){
+                            echo '/image/img_menus.png">
+                                <div class="img-title">
+                                    <h2>お品書き</h2>
+                                    <hr>
+                                </div>'; ; 
+                        } else if($template_name == 'information'){
+                            echo '/image/img_oshirase.png">
+                                <div class="img-title">
+                                    <h2>お知らせ</h2>
+                                    <hr>
+                                </div>'; 
+                        } else if($template_name == 'access'){
+                            echo '/image/img_access.png"> 
+                                <div class="img-title">
+                                    <h2>店舗情報</h2>
+                                    <hr>
+                                 </div>';
+                        }?>       
             </div>
         </div>
         <?php 

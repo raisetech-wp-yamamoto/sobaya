@@ -1,64 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link href='css/calendar.css' rel='stylesheet' />
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <script src="js/menu-fixed.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js" type="text/javascript"></script>
-    <script src='js/calendar.js'></script>
-    <script src='js/calendar-custom.js'></script>
-    <script src="js/ofi.min.js"></script>
-    <title>ホーム</title>
-</head>
-
-<body>
-    <!-- ▼ ヘッダー : 開始-->
-    <header class="header">
-        <div class="header__space"></div>
-        <div class="main">
-            <div class="main__left">
-                <div class="title">
-                    <img class="title-main" src="image/title_main.png">
-                    <img class="title-sub" src="image/title_sub.png">
-                </div>
-                <hr>
-                <div class="main-info">
-                    <span>
-                        〒012-3456<br />
-                        〇〇県〇〇市〇〇1-1-1<br />
-                        営業時間：00:00〜00:00<br />
-                        定休日：不定休
-                    </span>
-                </div>
-            </div>
-            <div class="main__right">
-                <img class="img-main" src="image/img_menus.png">
-                <div class="img-title">
-                    <h2>お品書き</h2>
-                    <hr>
-                </div>
-            </div>
-        </div>
-        <nav class="nav">
-            <ul class="nav__menu">
-                <li><a href="">ホーム</a></li>
-                <li><a href="">お品書き</a></li>
-                <li><a href="">お知らせ</a></li>
-                <li><a href="">店舗情報</a></li>
-                <li>
-                    <a class="nav-tel" href="tel:0123456789">0123-45-6789</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- ▲ ヘッダー : 終了-->
-    <!-- ▼ コンテンツ : 開始-->
+<?php
+/**
+ * Template Name: menus */
+?>
+<?php get_header(); ?>
     <main>
         <div class="l-wrapper">
             <div class="l-main">
@@ -143,7 +87,16 @@
                                 </p>
                                 <div class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></div>
                             </div>
-
+                            <!-- TEST1-->
+                            <div class="menu-panel js-menu-panel1">
+                                <p class="menu-panel__text">
+                                    <?php
+                                         
+                                    ?>
+                                </p>
+                                <div class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></div>
+                            </div>
+                            <!-- TEST1-->
                             <ul class="food-menu">
                                 <li class="menu-tab js-menu-tab1 js-menuActive1">
                                     <dl>
@@ -205,6 +158,14 @@
                                         <dd class="price">¥1,100円</dd>
                                     </dl>
                                 </li>
+                                <!-- テスト1-->
+                                <li class="menu-tab js-menu-tab1">
+                                    <dl>
+                                        <dt class="meal">野菜かき揚げそば　大盛</dt>
+                                        <dd class="price">¥1,100円</dd>
+                                    </dl>
+                                </li>
+                                <!-- テスト1-->
                             </ul>
                             <!-- ▼ メニュータブ : 開始-->
                             <h2 class="c-title--contents">温かいお蕎麦</h2>
@@ -378,21 +339,4 @@
             </div><!-- /.info__inner -->
         </section><!-- /p-info -->
     </main>
-
-    <footer class="footer">
-        <ul class="footer-menu">
-            <li><a href="">ホーム</a></li>
-            <li><a href="">お品書き</a></li>
-            <li><a href="">お知らせ</a></li>
-            <li><a href="">店舗情報</a></li>
-        </ul>
-        <small>&copy;そば処〇〇屋 . All Rights Reserved</small>
-    </footer>
-    <script>
-        objectFitImages();
-    </script>
-    <script src="js/tab.js"></script>
-
-</body>
-
-</html>
+<?php get_footer(); ?>
