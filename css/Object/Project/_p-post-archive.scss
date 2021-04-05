@@ -20,11 +20,6 @@
         @include mq(sm) {
             margin-top: 13px;
         }
-
-        a {
-            text-decoration: none;
-            color: $color-txt;
-        }
     }
 
     .entry-meta {
@@ -35,17 +30,18 @@
             margin-top: 6px;
         }
 
-        a {
+        .cat-links,
+        .entry-date {
             margin-right: 17px;
             text-decoration: none;
             @include fz_vw(16);
             line-height: 1.2;
             font-weight: normal;
             color: $color-txt;
+        }
 
-            time {
-                font-size: 100%;
-            }
+        time {
+            font-size: 100%;
         }
     }
 

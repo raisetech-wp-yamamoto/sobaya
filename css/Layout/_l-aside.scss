@@ -3,6 +3,7 @@
 	width: 100%;
 
 	@include mq(sm) {
-		display: none;
+		margin-top: 8%;
+		max-width: 100%;
 	}
 }

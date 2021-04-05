@@ -1,5 +1,11 @@
 .p-pagination {
   margin-top: 90px;
+  $size-box: 40px;
+  $size-box-sp: 30px;
+
+  @include mq(sm) {
+    margin-top: 8%;
+  }
 
   .pagination {
     margin-top: -12px;
@@ -25,13 +31,21 @@
         margin-left: 12px;
         margin-top: 12px;
         display: inline-block;
-        width: 40px;
-        height: 40px;
+        width: $size-box;
+        height: $size-box;
         border: none;
         background: $color-gray1;
         color: $color-white2;
         font-size: 1.6rem;
-        line-height: 40px;
+        line-height: $size-box;
+
+        @include mq(sm) {
+          margin-left: 10px;
+          width: $size-box-sp;
+          height: $size-box-sp;
+          font-size: 1.2rem;
+          line-height: $size-box-sp;
+        }
       }
 
       .dots {
@@ -39,10 +53,17 @@
         margin-left: 12px;
         margin-top: 12px;
         display: inline-block;
-        height: 40px;
+        height: $size-box;
         font-size: 1.6rem;
         font-weight: bold;
-        line-height: 40px;
+        line-height: $size-box;
+
+        @include mq(sm) {
+          margin-left: 10px;
+          height: $size-box-sp;
+          font-size: 1.2rem;
+          line-height: $size-box-sp;
+        }
       }
 
 
@@ -51,17 +72,25 @@
         margin-left: 12px;
         margin-top: 12px;
         display: inline-block;
-        width: 40px;
-        height: 40px;
+        width: $size-box;
+        height: $size-box;
         border: none;
         font-size: 1.6rem;
         text-decoration: none;
-        line-height: 40px;
+        line-height: $size-box;
         color: $color-pagenation-txt;
         background-color: $color-pagenation-bg1;
         transition-property: color background-color;
         transition-timing-function: $transition-timing-function;
         transition-duration: $transition-duration;
+
+        @include mq(sm) {
+          margin-left: 10px;
+          width: $size-box-sp;
+          height: $size-box-sp;
+          font-size: 1.2rem;
+          line-height: $size-box-sp;
+        }
 
         &:hover,
         &:focus {
@@ -77,12 +106,17 @@
 
         &.prev,
         &.next {
-          width: 40px;
+          width: $size-box;
           background-color: $color-white1;
           fill: $color-pagenation-txt;
           transition-property: fill color background-color;
           transition-timing-function: $transition-timing-function;
           transition-duration: $transition-duration;
+
+          @include mq(sm) {
+            width: $size-box-sp;
+            font-size: 1.2rem;
+          }
 
 
           &:hover,

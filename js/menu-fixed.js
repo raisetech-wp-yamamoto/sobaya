@@ -2,8 +2,8 @@
  * 正常に動作させるためにナビゲーションメニュー以下のHTMLタグ全体を
  *  <main>タグで囲むようにしてください。
 */
-(function($) {
-$(function() {
+jQuery(function($) {
+  $(function() {
     var $win = $(window),
         $main = $('main'),
         $nav = $('nav'),
@@ -35,5 +35,4 @@ $(function() {
       }
     });
   });
-
-})( jQuery );
+})

@@ -40,7 +40,6 @@
         </ul>
         <small>&copy;そば処〇〇屋 . All Rights Reserved</small>
     </footer>
-    <script> objectFitImages(); </script>
     <?php wp_footer(); ?>
 </body>
 </html>

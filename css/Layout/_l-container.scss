@@ -2,13 +2,14 @@
     max-width: 1561px;
     margin-left: auto;
     margin-right: auto;
+	overflow: hidden;
 
     &.is-flex {
         display: flex;
         justify-content: space-between;
+        @include mq(sm) {
+            flex-direction: column-reverse; 
+        }
     }
 
-	@include mq(md) {
-        
-    }
 }

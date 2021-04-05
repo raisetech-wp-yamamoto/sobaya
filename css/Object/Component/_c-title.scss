@@ -26,7 +26,7 @@
     }
 
     &--contents {
-        padding: calc(10.5/1037*100%) 0;
+        height: calc(clamp(12px, 3.22917vw, 3.22917vw) + 20px);
         @include fz_vw(42);
         line-height: 1;
         font-weight: bold;
@@ -35,19 +35,21 @@
         border-bottom: 2px solid #393939;
 
         @include mq(sm) {
+            height: 23px;
             font-size: 1.2rem;
         }
 
-        &::first-letter {
+        .first-chara {
+            display: inline-block;
             margin-right: 0.1em;
-            padding: calc(10.5/1037*100%);
+            padding: 10px;
             @include fz_vw(62);
             line-height: 1;
             color: #fff;
             background-color: #393939;
 
             @include mq(sm) {
-                padding: 3.5px;
+                padding: 4px;
                 font-size: 1.5rem;
             }
         }

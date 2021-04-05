@@ -4,21 +4,33 @@
     background: $color-gray2 0% 0% no-repeat padding-box;
     opacity: 0.9;
 
+    @include mq(sm) {
+        padding: 5% 6%;
+    }
+
     &.sp {
         display: none;
-        padding: 20px 15px;
+
+        @include mq(sm) {
+            margin-top: 3%;
+            padding: 6% 4%;
+            display: block;
+        }
+    }
+
+    &.h100 {
+        height: 100%;
     }
 
     @include mq(md) {
         margin-top: 12px;
     }
 
-    &:first-of-type {
+    &.top {
         margin-top: 0;
 
         @include mq(sm) {
-            display: block;
-            margin-top: 12px;
+            display: none;
         }
     }
 
@@ -40,7 +52,7 @@
 
                 &:hover {
                     transition: all 0.3s;
-                    color: $color-hover;
+                    color: $color-hover3;
                 }
 
                 &.js-tabActive {

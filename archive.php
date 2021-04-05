@@ -65,7 +65,7 @@
             <div class="l-main">
                 <div class="l-container is-flex">
                     <div class="l-aside">
-                        <div class="c-widget">
+                        <div class="c-widget top">
                             <form class="p-search-form" id="searchform">
                                 <input class="p-search-form__keyword" placeholder="">
                                 <input class="p-search-form__submit" id="searchsubmit" type="submit" value="検索">
@@ -87,7 +87,7 @@
                                 <li><a href="#">通販</a></li>
                             </ul>
                         </div><!-- /.widget -->
-                        <div class="c-widget">
+                        <div class="c-widget h100">
                             <h2 class="c-title--section">アーカイブ</h2>
                             <ul>
                                 <li><a href="#">2020年1月</a></li>
@@ -104,7 +104,7 @@
                     </div><!-- /.l-aside -->
 
                     <div class="l-contents">
-                        <h2 class="c-title--contents">お知らせ</h2>
+                        <h2 class="c-title--contents"><span class="first-chara">お</span>知らせ</h2>
                         <div class="c-widget sp">
                             <form class="p-search-form" id="searchform">
                                 <input class="p-search-form__keyword" placeholder="">
@@ -116,15 +116,11 @@
                             <article class="hentry">
                                 <div class="hentry-content">
                                     <header class="entry-header">
-                                        <h2 class="entry-title c-title--post">
-                                            <a href="#">公式ホームページ開設いたしました！！</a>
-                                        </h2>
+                                        <h2 class="entry-title c-title--post">公式ホームページ開設いたしました！！</h2>
                                         <div class="entry-meta">
-                                            <a href="#"><time class="entry-date published">2020年1月10日</time></a>
-                                            <p class="cat-links">
-                                                <a href="#" rel="category">お蕎麦</a>
-                                                <a href="#" rel="category">新規開設</a>
-                                            </p>
+                                            <time class="entry-date published">2020年1月10日</time>
+                                            <p class="cat-links" rel="category">お蕎麦</p>
+                                            <p class="cat-links" rel="category">カテゴリー</p>
                                         </div>
                                     </header>
                                     <div class="entry-content">
@@ -139,17 +135,15 @@
                             <article class="hentry">
                                 <div class="hentry-content">
                                     <header class="entry-header">
-                                        <h2 class="entry-title c-title--post">
-                                            <a href="#">タイトルが入ります</a>
-                                        </h2>
+                                        <h2 class="entry-title c-title--post">公式ホームページ開設いたしました！！</h2>
                                         <div class="entry-meta">
-                                            <a href="#"><time class="entry-date published">2020年1月1日</time></a>
-                                            <p class="cat-links">
-                                                <a href="#" rel="category">カテゴリーが入ります</a>
-                                            </p>
+                                            <time class="entry-date published">2020年1月10日</time>
+                                            <p class="cat-links" rel="category">お蕎麦</p>
+                                            <p class="cat-links" rel="category">カテゴリー</p>
                                         </div>
                                     </header>
                                     <div class="entry-content">
+                                        <img src="/image/img_sobanomi.png" alt="">
                                         <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                                         </p>
                                     </div>
@@ -160,17 +154,34 @@
                             <article class="hentry">
                                 <div class="hentry-content">
                                     <header class="entry-header">
-                                        <h2 class="entry-title c-title--post">
-                                            <a href="#">新型コロナウイルスによる緊急事態宣言について</a>
-                                        </h2>
+                                        <h2 class="entry-title c-title--post">公式ホームページ開設いたしました！！</h2>
                                         <div class="entry-meta">
-                                            <a href="#"><time class="entry-date published">2019年12月22日</time></a>
-                                            <p class="cat-links">
-                                                <a href="#" rel="category">おやすみについて</a>
-                                            </p>
+                                            <time class="entry-date published">2020年1月10日</time>
+                                            <p class="cat-links" rel="category">お蕎麦</p>
+                                            <p class="cat-links" rel="category">カテゴリー</p>
                                         </div>
                                     </header>
                                     <div class="entry-content">
+                                        <img src="/image/img_sobanomi.png" alt="">
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- ▲ 投稿 : 終了-->
+                            <!-- ▼ 投稿 : 開始-->
+                            <article class="hentry">
+                                <div class="hentry-content">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title c-title--post">公式ホームページ開設いたしました！！</h2>
+                                        <div class="entry-meta">
+                                            <time class="entry-date published">2020年1月10日</time>
+                                            <p class="cat-links" rel="category">お蕎麦</p>
+                                            <p class="cat-links" rel="category">カテゴリー</p>
+                                        </div>
+                                    </header>
+                                    <div class="entry-content">
+                                        <img src="/image/img_sobanomi.png" alt="">
                                         <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                                         </p>
                                     </div>
@@ -198,10 +209,8 @@
                                         </svg>
                                     </a>
                                     <a class="page-numbers" href="">1</a>
-                                    <a class="page-numbers" href="">2</a>
-                                    <span aria-current="page" class="page-numbers current">3</span>
-                                    <a class="page-numbers" href="">4</a>
-                                    <a class="page-numbers" href="">5</a>
+                                    <span aria-current="page" class="page-numbers current">2</span>
+                                    <a class="page-numbers" href="">3</a>
                                     <span class="page-numbers dots">&hellip;</span>
                                     <a class="page-numbers" href="">12</a>
                                     <a class="next page-numbers" href="">

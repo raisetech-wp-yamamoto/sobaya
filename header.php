@@ -32,24 +32,12 @@
                         $template_name = basename($template, '.php');
                         if(is_front_page()){
                             echo '/image/img_main.png">'; 
-                        } else if($template_name == 'menus'){
-                            echo '/image/img_menus.png">
-                                <div class="img-title">
-                                    <h2>お品書き</h2>
-                                    <hr>
-                                </div>'; ; 
-                        } else if($template_name == 'information'){
-                            echo '/image/img_oshirase.png">
-                                <div class="img-title">
-                                    <h2>お知らせ</h2>
-                                    <hr>
-                                </div>'; 
-                        } else if($template_name == 'access'){
-                            echo '/image/img_access.png"> 
-                                <div class="img-title">
-                                    <h2>店舗情報</h2>
-                                    <hr>
-                                 </div>';
+                        } else if($template_name == 'index'){
+                            echo '/image/img_menus.png"><div class="img-title"><h2>お品書き</h2><hr></div>'; 
+                        } else if($template_name == 'archive'){
+                            echo '/image/img_oshirase.png"><div class="img-title"><h2>お知らせ</h2><hr></div>'; 
+                        } else if($template_name == 'page'){
+                            echo '/image/img_access.png"><div class="img-title"><h2>店舗情報</h2><hr></div>';
                         }?>       
             </div>
         </div>
