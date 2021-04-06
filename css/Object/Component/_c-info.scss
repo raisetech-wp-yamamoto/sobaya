@@ -42,7 +42,7 @@
             @include fz_vw(16, 960);
         }
     }
-    :not(:nth-last-child(2)):not(:nth-last-child(3)):not(a):not(dt){
+    :not(:nth-last-child(2)):not(a):not(dt){
         padding-bottom: 0.9%;
         border-bottom: 1px dashed $color-txt;
     }

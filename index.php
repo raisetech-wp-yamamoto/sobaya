@@ -11,10 +11,24 @@
                         <div class="c-widget top h100">
                             <h2 class="c-title--section">お品書き</h2>
                             <ul class="tab-menu">
-                                <li class="menu-tab js-menu-tab js-menuActive"><span>冷たいおそば</span></li>
-                                <li class="menu-tab js-menu-tab"><span>温かいおそば</span></li>
-                                <li class="menu-tab js-menu-tab"><span>一品物</span></li>
-                                <li class="menu-tab js-menu-tab"><span>お飲み物</span></li>
+                                <?php
+                                // 親カテゴリーのものだけを一覧で取得
+                                $args = array(
+                                    'parent' => 0,
+                                    'orderby' => 'term_order',
+                                    'order' => 'ASC',
+                                    'exclude' => '1' //今回は未分類を除外したいのでID:1をexclude
+                                );
+                                // $categories = get_categories($args);
+                                $categories = get_terms('menus_cat',$args);
+                                ?>
+                                <?php foreach ($categories as $category) : $loopcount++; ?>
+                                <?php if ($loopcount <= 1) : ?>
+                                    <li class="menu-tab js-menu-tab js-menuActive"><span><?php echo $category->name; ?></span></li>
+                                <?php else : ?>
+                                    <li class="menu-tab js-menu-tab"><span><?php echo $category->name; ?></span></li>
+                                <?php endif; ?>
+                                <?php endforeach; ?>
                             </ul><!-- .tab-menu -->
 
                         </div><!-- /.widget -->
@@ -26,127 +40,33 @@
                             <!-- ▼ メニュータブ : 開始-->
                             <h2 class="c-title--contents"><span class="first-chara">冷</span>たいおそば</h2>
                             <ul>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">ざるそば 普通盛</dt>
-                                        <dd class="price"><span>¥</span>900<span>円</span></dd>
-                                    </dl>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">ざるそば 中盛</dt>
-                                        <dd class="price"><span>¥</span>1,000<span>円</span></dd>
-                                    </dl>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">ざるそば 大盛</dt>
-                                        <dd class="price"><span>¥</span>1,300<span>円</span></dd>
-                                    </dl>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">追加ざる</dt>
-                                        <dd class="price"><span>¥</span>400<span>円</span></dd>
-                                    </dl>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">たぬきおろしそば　普通盛</dt>
-                                        <dd class="price"><span>¥</span>900<span>円</span></dd>
-                                    </dl>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">たぬきおろしそば 大盛</dt>
-                                        <dd class="price"><span>¥</span>1,050<span>円</span></dd>
-                                    </dl>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">おろしそば 普通盛</dt>
-                                        <dd class="price"><span>¥</span>850<span>円</span></dd>
-                                    </dl>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">おろしそば 大盛</dt>
-                                        <dd class="price"><span>¥</span>900<span>円</span></dd>
-                                    </dl>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">野菜かき揚げそば 普通盛</dt>
-                                        <dd class="price"><span>¥</span>900<span>円</span></dd>
-                                    </dl>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-panel accordion__content1">
-                                        <p class="menu-panel__text">
-                                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                        <p class="menu-panel__img"><img src="/image/img_zaru.png" alt=""></p>
-                                    </div>
-                                    <dl class="menu-tab js-accordion-menu1">
-                                        <dt class="meal">野菜かき揚げそば 大盛</dt>
-                                        <dd class="price"><span>¥</span>900<span>円</span></dd>
-                                    </dl>
-                                </li>
-
+                                <?php
+                                    $args = array(
+                                        'post_type' => 'menus',
+                                        'tax_query'      => array(
+                                            array(
+                                                'taxonomy' => 'menus_cat',  // カスタムタクソノミー名
+                                                'field'    => 'slug',  // ターム名を term_id,slug,name のどれで指定するか
+                                                'terms'    => 'cold-soba' // タクソノミーに属するターム名
+                                            )
+                                        )
+                                    );
+                                    $the_query = new WP_Query($args);
+                                    if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+                                    ?>
+                                    <li class="menu-item">
+                                        <div class="menu-panel accordion__content1">
+                                            <p class="menu-panel__text"><?php the_field('menu-desc'); ?></P> 
+                                            <p class="menu-panel__img"><img src="<?php the_field('menu-img'); ?>" /></p>
+                                        </div>
+                                        <dl class="menu-tab js-accordion-menu1">
+                                            <dt class="meal"><?php the_title(); ?></dt>
+                                            <dd class="price"><span>¥</span><?php the_field('menu-price'); ?><span>円</span></dd>
+                                        </dl>
+                                    </li>
+                                    <?php endwhile;
+                                    endif; ?>
+                                <?php wp_reset_postdata(); ?>
                             </ul>
                         </div><!-- /.tab-content -->
                         <!-- ▲ メニュータブ : 終了-->

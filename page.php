@@ -7,10 +7,10 @@
         <section class="l-wrapper">
             <div class="l-main">
                 <div class="l-contents u-margin-auto">
-                    <h2 class="c-title--contents">店舗情報</h2>
+                    <h2 class="c-title--contents"><span class="first-chara">店</span>舗情報</h2>
                     <dl class="access-info">
                         <?php
-                            $page_id = 19;
+                            $page_id = 9;
                             $content = get_page($page_id);
                             echo $content -> post_content;
                         ?>

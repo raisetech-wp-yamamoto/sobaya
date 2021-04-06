@@ -578,7 +578,7 @@ body {
   }
 }
 
-.access-info :not(:nth-last-child(2)):not(:nth-last-child(3)):not(a):not(dt) {
+.access-info :not(:nth-last-child(2)):not(a):not(dt) {
   padding-bottom: 0.9%;
   border-bottom: 1px dashed #393939;
 }
@@ -2071,3 +2071,4 @@ body {
 .u-margin-auto {
   margin: auto;
 }
+/*# sourceMappingURL=style.css.map */
