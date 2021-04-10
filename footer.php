@@ -31,13 +31,14 @@
             </div><!-- /.info__inner -->
         </section><!-- /p-info -->
     </main>
-<footer class="footer">
-        <ul class="footer-menu">
-            <li><a href="">ホーム</a></li>
-            <li><a href="">お品書き</a></li>
-            <li><a href="">お知らせ</a></li>
-            <li><a href="">店舗情報</a></li>
-        </ul>
+    <footer class="footer">
+        <?php 
+            $args = array(
+                'container'       => false,
+                'menu_class'      => 'footer-menu'
+            );
+            wp_nav_menu( $args );
+        ?>
         <small>&copy;そば処〇〇屋 . All Rights Reserved</small>
     </footer>
     <?php wp_footer(); ?>

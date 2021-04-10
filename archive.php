@@ -24,24 +24,18 @@
                         <div class="c-widget">
                             <h2 class="c-title--section">カテゴリー</h2>
                             <ul>
-                                <li><a href="#">お蕎麦</a></li>
-                                <li><a href="#">イベント</a></li>
-                                <li><a href="#">おやすみについて</a></li>
-                                <li><a href="#">通販</a></li>
+                                <?php
+                                    $categories = get_categories();
+                                    foreach($categories as $category) {
+                                    echo '<li><a href="'.get_category_link($category->term_id).'">'.$category->name.'</a></li>';
+                                }
+                                ?>
                             </ul>
                         </div><!-- /.widget -->
                         <div class="c-widget h100">
                             <h2 class="c-title--section">アーカイブ</h2>
                             <ul>
-                                <li><a href="#">2020年1月</a></li>
-                                <li><a href="#">2019年12月</a></li>
-                                <li><a href="#">2019年11月</a></li>
-                                <li><a href="#">2019年10月</a></li>
-                                <li><a href="#">2019年9月</a></li>
-                                <li><a href="#">2019年8月</a></li>
-                                <li><a href="#">2019年7月</a></li>
-                                <li><a href="#">2019年6月</a></li>
-                                <li><a href="#">2019年5月</a></li>
+                                <?php wp_get_archives(); ?>
                             </ul>
                         </div><!-- /.widget -->
                     </div><!-- /.l-aside -->
@@ -56,80 +50,34 @@
                         </div><!-- /.c-widget -->
                         <div class="p-post-archive">
                             <!-- ▼ 投稿 : 開始-->
-                            <article class="hentry">
-                                <div class="hentry-content">
-                                    <header class="entry-header">
-                                        <h2 class="entry-title c-title--post">公式ホームページ開設いたしました！！</h2>
-                                        <div class="entry-meta">
-                                            <time class="entry-date published">2020年1月10日</time>
-                                            <p class="cat-links" rel="category">お蕎麦</p>
-                                            <p class="cat-links" rel="category">カテゴリー</p>
-                                        </div>
-                                    </header>
-                                    <div class="entry-content">
-                                        <img src="/image/img_sobanomi.png" alt="">
-                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <!-- ▲ 投稿 : 終了-->
-                            <!-- ▼ 投稿 : 開始-->
-                            <article class="hentry">
-                                <div class="hentry-content">
-                                    <header class="entry-header">
-                                        <h2 class="entry-title c-title--post">公式ホームページ開設いたしました！！</h2>
-                                        <div class="entry-meta">
-                                            <time class="entry-date published">2020年1月10日</time>
-                                            <p class="cat-links" rel="category">お蕎麦</p>
-                                            <p class="cat-links" rel="category">カテゴリー</p>
-                                        </div>
-                                    </header>
-                                    <div class="entry-content">
-                                        <img src="/image/img_sobanomi.png" alt="">
-                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <!-- ▲ 投稿 : 終了-->
-                            <!-- ▼ 投稿 : 開始-->
-                            <article class="hentry">
-                                <div class="hentry-content">
-                                    <header class="entry-header">
-                                        <h2 class="entry-title c-title--post">公式ホームページ開設いたしました！！</h2>
-                                        <div class="entry-meta">
-                                            <time class="entry-date published">2020年1月10日</time>
-                                            <p class="cat-links" rel="category">お蕎麦</p>
-                                            <p class="cat-links" rel="category">カテゴリー</p>
-                                        </div>
-                                    </header>
-                                    <div class="entry-content">
-                                        <img src="/image/img_sobanomi.png" alt="">
-                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <!-- ▲ 投稿 : 終了-->
-                            <!-- ▼ 投稿 : 開始-->
-                            <article class="hentry">
-                                <div class="hentry-content">
-                                    <header class="entry-header">
-                                        <h2 class="entry-title c-title--post">公式ホームページ開設いたしました！！</h2>
-                                        <div class="entry-meta">
-                                            <time class="entry-date published">2020年1月10日</time>
-                                            <p class="cat-links" rel="category">お蕎麦</p>
-                                            <p class="cat-links" rel="category">カテゴリー</p>
-                                        </div>
-                                    </header>
-                                    <div class="entry-content">
-                                        <img src="/image/img_sobanomi.png" alt="">
-                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
+                            <!-- 全件表示の場合（カテゴリ別・月別ではない場合）-->
+                            <?php
+                                if( !is_category() && !is_month()) :
+                                    $paged = (int) get_query_var('paged');
+                                    $args = array(
+                                        'posts_per_page' => 5,
+                                        'paged' => $paged,
+                                        'orderby' => 'post_date',
+                                        'order' => 'DESC',
+                                        'post_type' => 'post',
+                                        'post_status' => 'publish'
+                                    );
+                                    $the_query = new WP_Query($args);
+                                    if ( $the_query->have_posts() ) :
+                                        while ( $the_query->have_posts() ) : $the_query->the_post();
+                                        get_template_part('card');
+                                ?> 
+                            <?php endwhile; endif;?>
+                            <!-- 全件表示でない場合（カテゴリ別ではない場合）-->
+                            <?php
+                                else :
+                                    global $wp_query;
+                                    if ( $wp_query->have_posts() ) :
+                                        while ( $wp_query->have_posts() ) : $wp_query->the_post();
+                                        get_template_part('card');
+                                ?>
+                            <?php endwhile; endif; endif;?>
+                            <?php wp_reset_postdata(); ?>
                             <!-- ▲ 投稿 : 終了-->
                         </div><!-- /.c-post-archive -->
                         <div class="p-pagination">

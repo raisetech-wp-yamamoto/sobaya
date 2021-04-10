@@ -1704,7 +1704,6 @@ body {
 }
 
 .p-post-archive .hentry .entry-content img {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
