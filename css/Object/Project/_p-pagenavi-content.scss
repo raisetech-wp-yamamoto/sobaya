@@ -35,5 +35,11 @@
     .pagenavi-btn{
         margin-top: 10%;
         width: 100%;
+        >a{
+            display: block;
+            text-decoration: none;
+            color: $color-white2;
+        }
     }
+
 }

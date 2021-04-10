@@ -1,7 +1,7 @@
 .p-pagination {
   margin-top: 90px;
   $size-box: 40px;
-  $size-box-sp: 30px;
+  $size-box-sp: 25px;
 
   @include mq(sm) {
     margin-top: 8%;
@@ -100,9 +100,9 @@
         }
 
 
-        &.prev {
+/*         &.prev {
           margin-left: 0;
-        }
+        } */
 
         &.prev,
         &.next {

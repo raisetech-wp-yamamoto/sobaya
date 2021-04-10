@@ -3,7 +3,6 @@ FullCalendar v5.5.1
 Docs & License: https://fullcalendar.io/
 (c) 2020 Adam Shaw
 */
-jQuery(function($) {
 var FullCalendar = (function (exports) {
     'use strict';
 
@@ -14331,4 +14330,3 @@ var FullCalendar = (function (exports) {
     return exports;
 
 }({}));
-})

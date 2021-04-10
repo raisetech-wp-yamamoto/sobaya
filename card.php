@@ -8,7 +8,7 @@
         <header class="entry-header">
             <h2 class="entry-title c-title--post"><?php the_title(); ?></h2>
             <div class="entry-meta">
-                <time class="entry-date published"><?php the_date(); ?></time>
+                <time class="entry-date published"><?php echo get_the_date('Y年m月d日'); ?></time>
                 <?php
                     $category = get_the_category();
                     echo '<p class="cat-links" rel="category">'.$category[0]->name.'</p>';

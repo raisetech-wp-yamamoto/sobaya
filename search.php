@@ -1,7 +1,3 @@
-<?php
-/**
- * Template Name: information */
-?>
 <?php get_header(); ?>
     <main>
         <div class="l-wrapper">

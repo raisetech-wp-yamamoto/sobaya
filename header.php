@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホーム</title>
+    <script src='<?php echo get_theme_file_uri(); ?>/js/gkey.js'></script>
+    <script src='<?php echo get_theme_file_uri(); ?>/js/calendar.js'></script>
+    <script src='<?php echo get_theme_file_uri(); ?>/js/calendar-custom.js'></script>
+    <title>そば処〇〇屋</title>
     <?php wp_head(); ?>
 </head>
 <body>
@@ -34,9 +37,9 @@
                             echo '/image/img_main.png">'; 
                         } else if($template_name == 'index'){
                             echo '/image/img_menus.png"><div class="img-title"><h2>お品書き</h2><hr></div>'; 
-                        } else if($template_name == 'archive'){
+                        } else if($template_name == 'archive' || is_search()){
                             echo '/image/img_oshirase.png"><div class="img-title"><h2>お知らせ</h2><hr></div>'; 
-                        } else if($template_name == 'page'){
+                        } else {
                             echo '/image/img_access.png"><div class="img-title"><h2>店舗情報</h2><hr></div>';
                         }?>       
             </div>

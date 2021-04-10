@@ -1,4 +1,3 @@
-jQuery(function($) {
 document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
     const myApiKey = gCalApi.API_KEY;
@@ -144,4 +143,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     calendarSmall.render();
 });
-})

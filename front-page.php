@@ -31,19 +31,19 @@
                     <h3>お品書き</h3>
                     <img src="<?php echo get_template_directory_uri(); ?>/image/img_oshinagaki.png">
                     <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <button class="pagenavi-btn">お品書き</button>
+                    <button class="pagenavi-btn"><a href="/menu">お品書き</a></button>
                 </div>
                 <div class="pagenavi-content">
                     <h3>お知らせ</h3>
                     <img src="<?php echo get_template_directory_uri(); ?>/image/img_oshirase.png">
                     <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <button class="pagenavi-btn">お知らせ</button>
+                    <button class="pagenavi-btn"><a href="/information">お知らせ</a></button>
                 </div>
                 <div class="pagenavi-content">
                     <h3>店舗情報</h3>
                     <img src="<?php echo get_template_directory_uri(); ?>/image/img_tenpo.png">
                     <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    <button class="pagenavi-btn">店舗情報</button>
+                    <button class="pagenavi-btn"><a href="/access">店舗情報</a></button>
                 </div>
             </div>
         </section>

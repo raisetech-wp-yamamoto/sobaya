@@ -60,7 +60,7 @@
                                     </div>
                                     <dl class="menu-tab js-accordion-menu1">
                                         <dt class="meal"><?php the_title(); ?></dt>
-                                        <dd class="price"><span>¥</span><?php the_field('menu-price'); ?><span>円</span></dd>
+                                        <dd class="price"><span>¥</span><?php the_field('menu-price'); ?></dd>
                                     </dl>
                                 </li>
                                 <?php endwhile;
@@ -94,7 +94,7 @@
                                     </div>
                                     <dl class="menu-tab js-accordion-menu2">
                                         <dt class="meal"><?php the_title(); ?></dt>
-                                        <dd class="price"><span>¥</span><?php the_field('menu-price'); ?><span>円</span></dd>
+                                        <dd class="price"><span>¥</span><?php the_field('menu-price'); ?></dd>
                                     </dl>
                                 </li>
                                 <?php endwhile;
@@ -128,7 +128,7 @@
                                     </div>
                                     <dl class="menu-tab js-accordion-menu3">
                                         <dt class="meal"><?php the_title(); ?></dt>
-                                        <dd class="price"><span>¥</span><?php the_field('menu-price'); ?><span>円</span></dd>
+                                        <dd class="price"><span>¥</span><?php the_field('menu-price'); ?></dd>
                                     </dl>
                                 </li>
                                 <?php endwhile;
@@ -163,7 +163,7 @@
                                     </div>
                                     <dl class="menu-tab js-accordion-menu4">
                                         <dt class="meal"><?php the_title(); ?></dt>
-                                        <dd class="price"><span>¥</span><?php the_field('menu-price'); ?><span>円</span></dd>
+                                        <dd class="price"><span>¥</span><?php the_field('menu-price'); ?></dd>
                                     </dl>
                                 </li>
                                 <?php endwhile;

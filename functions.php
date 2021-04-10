@@ -6,17 +6,14 @@ function my_scripts() {
   wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', 'all' );
   wp_enqueue_style( 'calendar', get_template_directory_uri() . '/css/calendar.css', array(), '1.0.0', 'all' );
   wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
+  wp_enqueue_style( 'font-awesome5', '//use.fontawesome.com/releases/v5.6.1/css/all.css', array(), '5.0.0' );
   wp_enqueue_script( 'menu-fixed', get_template_directory_uri() . '/js/menu-fixed.js', array( 'jquery' ), '1.0.0', false );
   wp_enqueue_script( 'moment', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js', array( '' ), '2.20.1');
-  wp_enqueue_script( 'gkey', get_template_directory_uri() . '/js/gkey.js', array(), '1.0.0', false );
-  wp_enqueue_script( 'calendar', get_template_directory_uri() . '/js/calendar.js', array( 'jquery'), '1.0.0', false );
-  wp_enqueue_script( 'calendar-custom', get_template_directory_uri() . '/js/calendar-custom.js', array( 'jquery'), '1.0.0', false );
   wp_enqueue_script( 'ofi.min', get_template_directory_uri() . '/js/ofi.min.js', array( 'jquery' ), '1.0.0', false );
   wp_enqueue_script( 'tab', get_template_directory_uri() . '/js/tab.js', array( 'jquery' ), '1.0.0', false );
   wp_enqueue_script( 'accordion.js', get_template_directory_uri() . '/js/accordion.js', array( 'jquery' ), '1.0.0', false );
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts' );
-
 
 add_action('init', 'custom_post_type');
 function custom_post_type()
@@ -70,3 +67,44 @@ function change_posts_per_page($query) {
     $query->set( 'posts_per_page', '5' );
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
+
+
+/* wp-pagenaviカスタマイズ */
+function custom_wp_pagenavi_class( $class_name ) {
+    switch( $class_name ) {
+      case 'current':
+        $class_name = 'current page-numbers';
+        break;
+      case 'page':
+        $class_name = 'page page-numbers';
+        break;
+      case 'larger':
+        $class_name = 'page larger page-numbers';
+        break;
+      case 'previouspostslink':
+        $class_name = 'prev page-numbers';
+        break;
+      case 'nextpostslink':
+        $class_name = 'next page-numbers';
+        break;
+      case 'extend':
+        $class_name = 'extend page-numbers dots';
+        break;
+      case 'first':
+        $class_name = 'first page-numbers';
+        break;
+      case 'last':
+        $class_name = 'last page-numbers';
+        break;
+    }
+    return $class_name;
+  }
+  
+  add_filter( 'wp_pagenavi_class_current', 'custom_wp_pagenavi_class' );
+  add_filter( 'wp_pagenavi_class_previouspostslink', 'custom_wp_pagenavi_class' );
+  add_filter( 'wp_pagenavi_class_nextpostslink', 'custom_wp_pagenavi_class' );
+  add_filter( 'wp_pagenavi_class_page', 'custom_wp_pagenavi_class' );
+  add_filter( 'wp_pagenavi_class_larger', 'custom_wp_pagenavi_class' );
+  add_filter( 'wp_pagenavi_class_extend', 'custom_wp_pagenavi_class' );
+  add_filter( 'wp_pagenavi_class_last', 'custom_wp_pagenavi_class' );
+  add_filter( 'wp_pagenavi_class_first', 'custom_wp_pagenavi_class' );

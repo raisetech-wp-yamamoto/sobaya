@@ -9,12 +9,26 @@
                 <div class="l-contents u-margin-auto">
                     <h2 class="c-title--contents"><span class="first-chara">店</span>舗情報</h2>
                     <dl class="access-info">
-                        <?php
-                            $page_id = 9;
-                            $content = get_page($page_id);
-                            echo $content -> post_content;
-                        ?>
+                        <dt>店名</dt>
+                        <dd>そば処○○屋</dd>
+                        <dt>住所</dt>
+                        <dd>〒012-3456 〇〇県〇〇市〇〇1-1-1</dd>
+                        <dt>電話番号</dt>
+                        <dd><a href="tel:0123-45-6789">0123-45-6789</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>00：00～00：00（そばが売切れ次第終了）</dd>
+                        <dt>定休日</dt>
+                        <dd>不定休</dd>
+                        <dt>支払方法</dt>
+                        <dd>現金のみ</dd>
+                        <dt>アクセス</dt>
+                        <dd>電車・バスでお越しの方<br>
+                            〇〇線〇〇駅より徒歩〇〇分<br><br>
+                            お車でお越しの方<br>
+                            〇〇〇〇ICより〇〇分
+                        </dd>
                     </dl>
+                    
                 </div>
             </div>
         </section>
