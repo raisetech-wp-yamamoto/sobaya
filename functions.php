@@ -5,11 +5,17 @@
 function my_scripts() {
   wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', 'all' );
   wp_enqueue_style( 'calendar', get_template_directory_uri() . '/css/calendar.css', array(), '1.0.0', 'all' );
+  wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/css/slick-theme.css', array(), '1.0.0', 'all' );
+  wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/css/slick.css', array(), '1.0.0', 'all' );
+  wp_enqueue_style( 'calendar', get_template_directory_uri() . '/css/calendar.css', array(), '1.0.0', 'all' );
   wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
   wp_enqueue_style( 'font-awesome5', '//use.fontawesome.com/releases/v5.6.1/css/all.css', array(), '5.0.0' );
   wp_enqueue_script( 'menu-fixed', get_template_directory_uri() . '/js/menu-fixed.js', array( 'jquery' ), '1.0.0', false );
   wp_enqueue_script( 'moment', '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js', array( '' ), '2.20.1');
   wp_enqueue_script( 'ofi.min', get_template_directory_uri() . '/js/ofi.min.js', array( 'jquery' ), '1.0.0', false );
+  wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.js', array( 'jquery' ), '1.0.0', false );
+  wp_enqueue_script( 'slick.min', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.0.0', false );
+  wp_enqueue_script( 'my-slick', get_template_directory_uri() . '/js/my-slick.js', array( 'jquery' ), '1.0.0', false );
   wp_enqueue_script( 'tab', get_template_directory_uri() . '/js/tab.js', array( 'jquery' ), '1.0.0', false );
   wp_enqueue_script( 'accordion.js', get_template_directory_uri() . '/js/accordion.js', array( 'jquery' ), '1.0.0', false );
 }
@@ -68,6 +74,14 @@ function change_posts_per_page($query) {
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
 
+/* 検索結果を投稿のみ */
+function SearchFilter( $query ) {
+	if ( $query -> is_search ) {
+		$query -> set( 'post_type', 'post' );
+	}
+	return $query;
+}
+add_filter( 'pre_get_posts', 'SearchFilter' );
 
 /* wp-pagenaviカスタマイズ */
 function custom_wp_pagenavi_class( $class_name ) {

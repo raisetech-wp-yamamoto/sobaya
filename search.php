@@ -47,36 +47,13 @@
                         <div class="p-post-archive">
                             <!-- ▼ 投稿 : 開始-->
                             <?php
-                                if( !is_category() && !is_month() && !is_search()) :
-                                    $paged = (int) get_query_var('paged');
-                                    $args = array(
-                                        'posts_per_page' => 5,
-                                        'paged' => $paged,
-                                        'orderby' => 'post_date',
-                                        'order' => 'DESC',
-                                        'post_type' => 'post',
-                                        'post_status' => 'publish'
-                                    );
-                                    $the_query = new WP_Query($args);
-                                    if ( $the_query->have_posts() ) :
-                                        while ( $the_query->have_posts() ) : $the_query->the_post();
-                                        get_template_part('card');
-                                ?> 
-                                <!-- 全件表示の場合（カテゴリ別・月別・検索結果ではない場合）-->
+                                global $wp_query;
+                                if ( $wp_query->have_posts() ) :
+                                    while ( $wp_query->have_posts() ) : $wp_query->the_post();
+                                    get_template_part('card');
+                            ?>
                             <?php endwhile; else : ?>
                             <p style="font-size: 20px; margin-top: 30px;">表示する記事がありません。</p>
-                            <?php endif;?>
-                            <?php
-                                else :
-                                    global $wp_query;
-                                    if ( $wp_query->have_posts() ) :
-                                        while ( $wp_query->have_posts() ) : $wp_query->the_post();
-                                        get_template_part('card');
-                                ?>
-                                <!-- 全件表示でない場合（カテゴリ別・月別・検索結果の場合）-->
-                            <?php endwhile; else : ?>
-                            <p style="font-size: 20px; margin-top: 30px;">表示する記事がありません。</p>
-                            <?php endif;?>
                             <?php endif;?>
                             <!-- ▲ 投稿 : 終了-->
                         </div><!-- /.c-post-archive -->

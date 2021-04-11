@@ -29,19 +29,12 @@
                 </div> 
             </div>
             <div class="main__right">
-                <img class="img-main" src="<?php echo get_template_directory_uri();
-                        global $template;
-                        $template_dir = basename ( dirname( $template ) );
-                        $template_name = basename($template, '.php');
-                        if(is_front_page()){
-                            echo '/image/img_main.png">'; 
-                        } else if($template_name == 'index'){
-                            echo '/image/img_menus.png"><div class="img-title"><h2>お品書き</h2><hr></div>'; 
-                        } else if($template_name == 'archive' || is_search()){
-                            echo '/image/img_oshirase.png"><div class="img-title"><h2>お知らせ</h2><hr></div>'; 
-                        } else {
-                            echo '/image/img_access.png"><div class="img-title"><h2>店舗情報</h2><hr></div>';
-                        }?>       
+                <ul class="slider">
+                    <li><img class="img-main" src="<?php echo get_theme_file_uri(); ?>/image/img_main.png" alt="image01"></li>
+                    <li><img class="img-main" src="<?php echo get_theme_file_uri(); ?>/image/img_menus.png" alt="image01"></li>
+                    <li><img class="img-main" src="<?php echo get_theme_file_uri(); ?>/image/img_oshirase.png" alt="image02"></li>
+                    <li><img class="img-main" src="<?php echo get_theme_file_uri(); ?>/image/img_access.png"></li>
+                </ul>    
             </div>
         </div>
         <?php 
