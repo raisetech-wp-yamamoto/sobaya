@@ -49,6 +49,7 @@
                 transition-property: color;
                 transition-timing-function: $transition-timing-function;
                 transition-duration: $transition-duration;
+                vertical-align: middle;
 
                 &:hover {
                     transition: all 0.3s;

@@ -873,6 +873,7 @@ body {
           transition-timing-function: ease-out;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+  vertical-align: middle;
 }
 
 .c-widget ul li a:hover,
